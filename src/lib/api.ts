@@ -1,4 +1,4 @@
-let BASE_URL = process.env.NEXT_PUBLIC_API_URL || 'http://127.0.0.1:8000';
+let BASE_URL = process.env.NEXT_PUBLIC_API_URL || 'https://minecraft-server-backend-ub33.onrender.com';
 
 export function getApiUrl() {
   let url = BASE_URL;
@@ -6,7 +6,7 @@ export function getApiUrl() {
     url = localStorage.getItem('backend_api_url') || BASE_URL;
   }
   url = url.trim().replace(/\/+$/, '');
-  return url || 'http://127.0.0.1:8000';
+  return url || 'https://minecraft-server-backend-ub33.onrender.com';
 }
 
 export function setApiUrl(url: string) {
